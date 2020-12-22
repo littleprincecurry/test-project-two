@@ -3,7 +3,6 @@ from flask_pymongo import PyMongo
 from os import environ
 import json
 
-# client_url = 'mongodb+srv://littleprincecurry:Arz9rWJm8xy8808F@clusterprime.mpaq0.mongodb.net/test?authSource=admin&replicaSet=atlas-ppsaa5-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true'
 
 app = Flask(__name__)
 app.config['MONGO_URI'] = 'mongodb://localhost:27017/news'
