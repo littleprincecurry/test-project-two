@@ -2,6 +2,7 @@ from flask import Flask, render_template, jsonify, request
 from flask_pymongo import PyMongo
 from os import environ
 import json
+import table
 
 
 app = Flask(__name__)
@@ -12,7 +13,8 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    html_table = table.returnTable()
+    return render_template('index.html', x=html_table)
 
 
 @app.route('/news')
