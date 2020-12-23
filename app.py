@@ -32,8 +32,7 @@ def news():
             'Published': headline['Published'],
             'compound score': headline['compound score'],
             'negative score': headline['negative score'],
-            'neutral score': headline['neutral score'],
-            'Full Text Clean': headline['Full Text Clean']
+            'neutral score': headline['neutral score']
         }
         data.append(item)
 
