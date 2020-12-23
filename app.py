@@ -6,7 +6,7 @@ import json
 
 app = Flask(__name__)
 app.config['MONGO_URI'] = environ.get(
-    'MONGODB') or 'mongodb://localhost:27017/news'
+    'MONGODB_TWO') or 'mongodb://localhost:27017/news'
 mongo = PyMongo(app)
 
 
@@ -17,7 +17,7 @@ def index():
 
 @app.route('/news')
 def news():
-    headlines = mongo.db.headlines.find({})
+    headlines = mongo.db.NFTA.find({})
     data = []
 
     for headline in headlines:
