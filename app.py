@@ -13,7 +13,7 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def index():
-    html_table = table.returnTable()
+    html_table = table.returnTable(data)
     return render_template('index.html', x=html_table)
 
 
