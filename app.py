@@ -13,9 +13,8 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def index():
-    html_table = table.returnTable(data)
+    html_table = table.returnTable()
     return render_template('index.html', x=html_table)
-
 
 @app.route('/news')
 def news():
